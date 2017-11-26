@@ -2,7 +2,7 @@ package ua.clean.project.cleanarchitecture.data.repository.impl;
 
 
 import ua.clean.project.cleanarchitecture.App;
-import ua.clean.project.cleanarchitecture.data.model.User;
+import ua.clean.project.cleanarchitecture.data.model.UserDB;
 import ua.clean.project.cleanarchitecture.data.persistence.RoomDB;
 import ua.clean.project.cleanarchitecture.data.repository.LoginRepository;
 
@@ -18,7 +18,7 @@ public class LoginRepositoryImpl implements LoginRepository {
     }
 
     @Override
-    public void createUser(User user) {
+    public void createUser(UserDB user) {
         mDataBase.addUser(user);
     }
 }

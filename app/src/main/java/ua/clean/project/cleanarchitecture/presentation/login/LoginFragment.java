@@ -1,4 +1,4 @@
-package ua.clean.project.cleanarchitecture.presentation.view.fragment;
+package ua.clean.project.cleanarchitecture.presentation.login;
 
 
 import android.databinding.DataBindingUtil;
@@ -10,8 +10,7 @@ import android.view.ViewGroup;
 
 import ua.clean.project.cleanarchitecture.R;
 import ua.clean.project.cleanarchitecture.databinding.FragmentLoginBinding;
-import ua.clean.project.cleanarchitecture.presentation.presenter.LoginPresenter;
-import ua.clean.project.cleanarchitecture.presentation.presenter.contract.LoginContract;
+import ua.clean.project.cleanarchitecture.presentation.users.UserFragment;
 import ua.clean.project.cleanarchitecture.presentation.view.model.UserViewModel;
 
 /**

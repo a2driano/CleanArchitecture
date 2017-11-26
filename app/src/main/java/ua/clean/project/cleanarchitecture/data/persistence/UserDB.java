@@ -5,15 +5,13 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import ua.clean.project.cleanarchitecture.data.model.User;
-
 import static ua.clean.project.cleanarchitecture.Constants.Persistence.DB_NAME;
 import static ua.clean.project.cleanarchitecture.Constants.Persistence.DB_VERSION;
 
 /**
  * Created by Andrii Papai on 26.11.2017.
  */
-@Database(entities = User.class, version = DB_VERSION)
+@Database(entities = ua.clean.project.cleanarchitecture.data.model.UserDB.class, version = DB_VERSION)
 public abstract class UserDB extends RoomDatabase {
 
     private static volatile UserDB INSTANCE;

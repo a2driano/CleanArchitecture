@@ -1,6 +1,6 @@
 package ua.clean.project.cleanarchitecture.domain;
 
-import ua.clean.project.cleanarchitecture.data.model.User;
+import ua.clean.project.cleanarchitecture.domain.model.User;
 
 /**
  * Created by kunde on 22.11.2017.

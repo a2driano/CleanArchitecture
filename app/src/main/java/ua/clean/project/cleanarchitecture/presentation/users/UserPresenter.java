@@ -1,12 +1,14 @@
-package ua.clean.project.cleanarchitecture.presentation.presenter;
+package ua.clean.project.cleanarchitecture.presentation.users;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ua.clean.project.cleanarchitecture.data.model.User;
+import ua.clean.project.cleanarchitecture.data.model.UserDB;
 import ua.clean.project.cleanarchitecture.domain.UserInteractor;
 import ua.clean.project.cleanarchitecture.domain.impl.UserInteractorImpl;
-import ua.clean.project.cleanarchitecture.presentation.presenter.contract.UserContract;
+import ua.clean.project.cleanarchitecture.domain.model.User;
+
+import static ua.clean.project.cleanarchitecture.utils.converter.ConverterUser.convertListDbToUser;
 
 /**
  * Created by Andrii Papai on 26.11.2017.

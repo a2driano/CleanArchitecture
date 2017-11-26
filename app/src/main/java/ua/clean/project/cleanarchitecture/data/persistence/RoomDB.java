@@ -2,7 +2,7 @@ package ua.clean.project.cleanarchitecture.data.persistence;
 
 import java.util.List;
 
-import ua.clean.project.cleanarchitecture.data.model.User;
+import ua.clean.project.cleanarchitecture.data.model.UserDB;
 
 /**
  * Created by Andrii Papai on 26.11.2017.
@@ -10,13 +10,13 @@ import ua.clean.project.cleanarchitecture.data.model.User;
 
 public interface RoomDB {
 
-    void addUser(User user);
+    void addUser(UserDB user);
 
-    void delete(User user);
+    void delete(ua.clean.project.cleanarchitecture.data.model.UserDB user);
 
-    void update(User user);
+    void update(UserDB user);
 
-    List<User> getUsers();
+    List<UserDB> getUsers();
 
-    User getUser(String login);
+    UserDB getUser(String login);
 }

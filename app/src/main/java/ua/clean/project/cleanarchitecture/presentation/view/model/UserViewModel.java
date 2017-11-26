@@ -4,7 +4,8 @@ import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
 import ua.clean.project.cleanarchitecture.BR;
-import ua.clean.project.cleanarchitecture.data.model.User;
+import ua.clean.project.cleanarchitecture.data.model.UserDB;
+import ua.clean.project.cleanarchitecture.domain.model.User;
 
 /**
  * Created by Andrii Papai on 26.11.2017.

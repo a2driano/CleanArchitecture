@@ -3,7 +3,7 @@ package ua.clean.project.cleanarchitecture.data.repository.impl;
 import java.util.List;
 
 import ua.clean.project.cleanarchitecture.App;
-import ua.clean.project.cleanarchitecture.data.model.User;
+import ua.clean.project.cleanarchitecture.data.model.UserDB;
 import ua.clean.project.cleanarchitecture.data.persistence.RoomDB;
 import ua.clean.project.cleanarchitecture.data.repository.UserRepository;
 
@@ -19,7 +19,7 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public List<User> getUsers() {
+    public List<UserDB> getUsers() {
         return mDataBase.getUsers();
     }
 }

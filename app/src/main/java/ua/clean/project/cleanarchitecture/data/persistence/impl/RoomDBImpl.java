@@ -2,8 +2,8 @@ package ua.clean.project.cleanarchitecture.data.persistence.impl;
 
 import java.util.List;
 
+import ua.clean.project.cleanarchitecture.data.model.UserDB;
 import ua.clean.project.cleanarchitecture.data.persistence.RoomDB;
-import ua.clean.project.cleanarchitecture.data.model.User;
 import ua.clean.project.cleanarchitecture.data.persistence.UserDao;
 
 /**
@@ -18,27 +18,27 @@ public class RoomDBImpl implements RoomDB {
     }
 
     @Override
-    public void addUser(User user) {
+    public void addUser(UserDB user) {
         mUserDao.addUser(user);
     }
 
     @Override
-    public void delete(User user) {
+    public void delete(UserDB user) {
         mUserDao.delete(user);
     }
 
     @Override
-    public void update(User user) {
+    public void update(UserDB user) {
         mUserDao.update(user);
     }
 
     @Override
-    public List<User> getUsers() {
+    public List<UserDB> getUsers() {
         return mUserDao.getUsers();
     }
 
     @Override
-    public User getUser(String login) {
+    public UserDB getUser(String login) {
         return mUserDao.getUser(login);
     }
 }

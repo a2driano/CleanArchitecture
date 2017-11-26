@@ -10,7 +10,7 @@
 
         <variable
             name="listener"
-            type="ua.clean.project.cleanarchitecture.presentation.presenter.contract.LoginContract.ILoginPresenter"/>
+            type="ua.clean.project.cleanarchitecture.presentation.login.LoginContract.ILoginPresenter"/>
     </data>
 
     <LinearLayout

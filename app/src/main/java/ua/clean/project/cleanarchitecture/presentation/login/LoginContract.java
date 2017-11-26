@@ -1,6 +1,6 @@
-package ua.clean.project.cleanarchitecture.presentation.presenter.contract;
+package ua.clean.project.cleanarchitecture.presentation.login;
 
-import ua.clean.project.cleanarchitecture.data.model.User;
+import ua.clean.project.cleanarchitecture.domain.model.User;
 
 /**
  * Created by Andrii Papai on 26.11.2017.

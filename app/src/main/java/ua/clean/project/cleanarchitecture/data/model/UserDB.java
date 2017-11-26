@@ -12,17 +12,17 @@ import static ua.clean.project.cleanarchitecture.Constants.Persistence.TABLE_NAM
  * Created by a2driano on 22.11.2017.
  */
 @Entity(tableName = TABLE_NAME)
-public class User extends BaseObservable {
+public class UserDB extends BaseObservable {
     @PrimaryKey
     @NonNull
     private String login;
     private String password;
 
-    public User() {
+    public UserDB() {
 
     }
 
-    public User(String login, String password) {
+    public UserDB(String login, String password) {
         this.login = login;
         this.password = password;
     }

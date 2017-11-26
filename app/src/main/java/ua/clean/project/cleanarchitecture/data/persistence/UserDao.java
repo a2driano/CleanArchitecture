@@ -9,7 +9,7 @@ import android.arch.persistence.room.Update;
 
 import java.util.List;
 
-import ua.clean.project.cleanarchitecture.data.model.User;
+import ua.clean.project.cleanarchitecture.data.model.UserDB;
 
 import static ua.clean.project.cleanarchitecture.Constants.Persistence.TABLE_NAME;
 
@@ -20,17 +20,17 @@ import static ua.clean.project.cleanarchitecture.Constants.Persistence.TABLE_NAM
 @Dao
 public interface UserDao {
     @Insert(onConflict = OnConflictStrategy.ROLLBACK)
-    void addUser(User user);
+    void addUser(UserDB user);
 
     @Delete
-    void delete(User user);
+    void delete(ua.clean.project.cleanarchitecture.data.model.UserDB user);
 
     @Update
-    void update(User user);
+    void update(UserDB user);
 
     @Query("SELECT * FROM " + TABLE_NAME)
-    List<User> getUsers();
+    List<UserDB> getUsers();
 
     @Query("SELECT * FROM " + TABLE_NAME + " WHERE login LIKE :login")
-    User getUser(String login);
+    UserDB getUser(String login);
 }

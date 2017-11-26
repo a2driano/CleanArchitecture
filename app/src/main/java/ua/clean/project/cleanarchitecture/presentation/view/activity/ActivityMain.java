@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import ua.clean.project.cleanarchitecture.R;
-import ua.clean.project.cleanarchitecture.presentation.view.fragment.LoginFragment;
+import ua.clean.project.cleanarchitecture.presentation.login.LoginFragment;
 
 public class ActivityMain extends AppCompatActivity {
 

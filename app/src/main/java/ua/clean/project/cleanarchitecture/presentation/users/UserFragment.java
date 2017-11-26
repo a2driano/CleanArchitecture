@@ -1,4 +1,4 @@
-package ua.clean.project.cleanarchitecture.presentation.view.fragment;
+package ua.clean.project.cleanarchitecture.presentation.users;
 
 
 import android.os.Bundle;
@@ -13,9 +13,8 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import ua.clean.project.cleanarchitecture.R;
-import ua.clean.project.cleanarchitecture.data.model.User;
-import ua.clean.project.cleanarchitecture.presentation.presenter.UserPresenter;
-import ua.clean.project.cleanarchitecture.presentation.presenter.contract.UserContract;
+import ua.clean.project.cleanarchitecture.data.model.UserDB;
+import ua.clean.project.cleanarchitecture.domain.model.User;
 import ua.clean.project.cleanarchitecture.presentation.view.adapter.UserAdapter;
 
 /**

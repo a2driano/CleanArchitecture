@@ -7,7 +7,7 @@
 
         <variable
             name="user"
-            type="ua.clean.project.cleanarchitecture.data.model.User"/>
+            type="ua.clean.project.cleanarchitecture.domain.model.User"/>
     </data>
 
     <android.support.v7.widget.CardView
