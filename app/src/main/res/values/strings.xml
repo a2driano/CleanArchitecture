@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">CleanArchitecture</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="error_text">Passwords must be equals!</string>
+    <string name="login_text">Login</string>
+    <string name="password_text">Password</string>
+    <string name="password_repeat_text">Password repeat</string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="registration_button">registration</string>
+    <string name="user_page_button">user page</string>
 </resources>

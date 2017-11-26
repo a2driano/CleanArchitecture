@@ -1,11 +1,11 @@
-package ua.clean.project.cleanarchitecture.presentation.activity;
+package ua.clean.project.cleanarchitecture.presentation.view.activity;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import ua.clean.project.cleanarchitecture.R;
-import ua.clean.project.cleanarchitecture.presentation.fragment.FragmentLogin;
+import ua.clean.project.cleanarchitecture.presentation.view.fragment.LoginFragment;
 
 public class ActivityMain extends AppCompatActivity {
 
@@ -19,12 +19,9 @@ public class ActivityMain extends AppCompatActivity {
 
     private void startFragment() {
         FragmentManager manager = getSupportFragmentManager();
-        FragmentLogin fragment = FragmentLogin.newInstance();
+        LoginFragment fragment = LoginFragment.newInstance();
         manager.beginTransaction()
-                .add(R.id.container, fragment, FragmentLogin.class.getSimpleName())
-                .addToBackStack(null)
+                .add(R.id.container, fragment, LoginFragment.class.getSimpleName())
                 .commit();
-
-
     }
 }
