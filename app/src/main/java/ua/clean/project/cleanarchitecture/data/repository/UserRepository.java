@@ -2,6 +2,7 @@ package ua.clean.project.cleanarchitecture.data.repository;
 
 import java.util.List;
 
+import io.reactivex.Flowable;
 import ua.clean.project.cleanarchitecture.data.model.UserDB;
 
 /**
@@ -9,5 +10,5 @@ import ua.clean.project.cleanarchitecture.data.model.UserDB;
  */
 
 public interface UserRepository {
-    List<UserDB> getUsers();
+    Flowable<List<UserDB>> getUsers();
 }

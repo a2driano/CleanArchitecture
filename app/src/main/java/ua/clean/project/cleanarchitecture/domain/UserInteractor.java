@@ -2,12 +2,13 @@ package ua.clean.project.cleanarchitecture.domain;
 
 import java.util.List;
 
-import ua.clean.project.cleanarchitecture.domain.model.User;
+import io.reactivex.Flowable;
+import ua.clean.project.cleanarchitecture.data.model.UserDB;
 
 /**
  * Created by Andrii Papai on 26.11.2017.
  */
 
 public interface UserInteractor {
-    List<User> getUsers();
+    Flowable<List<UserDB>> getUsers();
 }

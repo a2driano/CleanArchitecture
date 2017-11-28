@@ -2,6 +2,7 @@ package ua.clean.project.cleanarchitecture.data.persistence;
 
 import java.util.List;
 
+import io.reactivex.Flowable;
 import ua.clean.project.cleanarchitecture.data.model.UserDB;
 
 /**
@@ -16,7 +17,7 @@ public interface RoomDB {
 
     void update(UserDB user);
 
-    List<UserDB> getUsers();
+    Flowable<List<UserDB>> getUsers();
 
     UserDB getUser(String login);
 }

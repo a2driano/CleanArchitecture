@@ -2,6 +2,7 @@ package ua.clean.project.cleanarchitecture.data.repository.impl;
 
 import java.util.List;
 
+import io.reactivex.Flowable;
 import ua.clean.project.cleanarchitecture.App;
 import ua.clean.project.cleanarchitecture.data.model.UserDB;
 import ua.clean.project.cleanarchitecture.data.persistence.RoomDB;
@@ -19,7 +20,7 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public List<UserDB> getUsers() {
+    public Flowable<List<UserDB>> getUsers() {
         return mDataBase.getUsers();
     }
 }

@@ -2,6 +2,7 @@ package ua.clean.project.cleanarchitecture.data.persistence.impl;
 
 import java.util.List;
 
+import io.reactivex.Flowable;
 import ua.clean.project.cleanarchitecture.data.model.UserDB;
 import ua.clean.project.cleanarchitecture.data.persistence.RoomDB;
 import ua.clean.project.cleanarchitecture.data.persistence.UserDao;
@@ -33,7 +34,7 @@ public class RoomDBImpl implements RoomDB {
     }
 
     @Override
-    public List<UserDB> getUsers() {
+    public Flowable<List<UserDB>> getUsers() {
         return mUserDao.getUsers();
     }
 

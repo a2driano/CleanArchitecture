@@ -9,6 +9,7 @@ import android.arch.persistence.room.Update;
 
 import java.util.List;
 
+import io.reactivex.Flowable;
 import ua.clean.project.cleanarchitecture.data.model.UserDB;
 
 import static ua.clean.project.cleanarchitecture.Constants.Persistence.TABLE_NAME;
@@ -29,7 +30,7 @@ public interface UserDao {
     void update(UserDB user);
 
     @Query("SELECT * FROM " + TABLE_NAME)
-    List<UserDB> getUsers();
+    Flowable<List<UserDB>> getUsers();
 
     @Query("SELECT * FROM " + TABLE_NAME + " WHERE login LIKE :login")
     UserDB getUser(String login);

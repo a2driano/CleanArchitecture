@@ -2,6 +2,7 @@ package ua.clean.project.cleanarchitecture.domain.impl;
 
 import java.util.List;
 
+import io.reactivex.Flowable;
 import ua.clean.project.cleanarchitecture.data.model.UserDB;
 import ua.clean.project.cleanarchitecture.data.repository.UserRepository;
 import ua.clean.project.cleanarchitecture.data.repository.impl.UserRepositoryImpl;
@@ -22,7 +23,8 @@ public class UserInteractorImpl implements UserInteractor {
     }
 
     @Override
-    public List<User> getUsers() {
-        return convertListDbToUser(mUserRepository.getUsers());
+    public Flowable<List<UserDB>> getUsers() {
+//        return convertListDbToUser(mUserRepository.getUsers());
+        return mUserRepository.getUsers();
     }
 }
