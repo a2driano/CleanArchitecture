@@ -59,4 +59,10 @@ public class UserFragment extends Fragment implements UserContract.IUserView {
         mUserAdapter = new UserAdapter(list);
         mRecyclerView.setAdapter(mUserAdapter);
     }
+
+    @Override
+    public void onStop() {
+        mUserPresenter.clearDisposable();
+        super.onStop();
+    }
 }

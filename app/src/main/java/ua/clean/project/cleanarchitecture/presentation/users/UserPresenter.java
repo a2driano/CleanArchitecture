@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 import ua.clean.project.cleanarchitecture.data.model.UserDB;
@@ -23,6 +24,7 @@ import static ua.clean.project.cleanarchitecture.utils.converter.ConverterUser.c
 public class UserPresenter implements UserContract.IUserPresenter {
     private UserContract.IUserView view;
     private UserInteractor mUserInteractor;
+    private final CompositeDisposable mDisposable = new CompositeDisposable();
 
     public UserPresenter(UserContract.IUserView view) {
         this.view = view;
@@ -36,11 +38,8 @@ public class UserPresenter implements UserContract.IUserPresenter {
         userList.add(new User("John", "Doe"));
         userList.add(new User("John", "Doe"));
 
-//        userList.addAll(mUserInteractor.getUsers());
 
-        view.setData(userList);
-
-        mUserInteractor.getUsers()
+        mDisposable.add(mUserInteractor.getUsers()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<List<UserDB>>() {
@@ -53,6 +52,12 @@ public class UserPresenter implements UserContract.IUserPresenter {
                     public void accept(Throwable throwable) throws Exception {
                         Log.e("TAG", "error of receiving data ", throwable);
                     }
-                });
+                })
+        );
+    }
+
+    @Override
+    public void clearDisposable() {
+        mDisposable.clear();
     }
 }

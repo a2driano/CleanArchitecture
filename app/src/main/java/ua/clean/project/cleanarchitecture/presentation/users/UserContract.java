@@ -17,5 +17,7 @@ public interface UserContract {
 
     interface IUserPresenter {
         void getData();
+
+        void clearDisposable();
     }
 }
